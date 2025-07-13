@@ -1,0 +1,15 @@
+.sidebarMenu {
+	ul {
+		display: flex;
+		flex-direction: column;
+		row-gap: 0.6rem;
+	}
+	.title {
+		opacity: 0.45;
+		font-size: 0.75rem;
+		line-height: 1rem;
+		margin-bottom: 1.3rem;
+		font-weight: 500;
+		white-space: nowrap;
+	}
+}

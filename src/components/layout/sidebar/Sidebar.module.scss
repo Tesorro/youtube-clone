@@ -1,0 +1,7 @@
+.sidebar {
+	width: var(--sidebar-width);
+	padding: 1.2rem;
+	border-right: 1px solid;
+	border-color: rgba(var(--border-rgb), 0.7);
+	overflow: hidden;
+}
