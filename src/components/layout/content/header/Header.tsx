@@ -1,3 +1,5 @@
+import cls from './Header.module.scss'
+
 export function Header() {
-	return <header>HEADER</header>
+	return <header className={cls.header}>HEADER</header>
 }

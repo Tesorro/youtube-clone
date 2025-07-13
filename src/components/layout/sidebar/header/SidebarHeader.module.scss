@@ -1,0 +1,30 @@
+.sidebarHeader {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+	margin-bottom: 3rem;
+}
+.logoWrapper {
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+}
+.logo {
+	color: var(--red);
+}
+.burgerBtn {
+	display: flex;
+	opacity: 0.7;
+	transition-duration: 333ms;
+	transition-property: opacity;
+	transition-timing-function: ease-in-out;
+	&:hover {
+		opacity: 1;
+	}
+}
+.title {
+	font-weight: 500;
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+	// white-space: nowrap;
+}

@@ -1,9 +1,11 @@
 :root {
-  // Цвета
-  --red: #ad2528;
-  --white: #ffffff;
-  --bg-color: #191b28;
-  --border-color: #2a3439;
+	--red: #ad2528;
+	--white: #ffffff;
+	--bg-color: #191b28;
+	--border-color: #2a3439;
+	--border-rgb: 42, 52, 57;
+
+	--sidebar-width: 16rem;
 }
 
 // @media (prefers-color-scheme: dark) {
@@ -15,27 +17,67 @@
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+	max-width: 100vw;
+	overflow-x: hidden;
+	// font-size: 1.125rem;
+	// line-height: 1.75rem;
 }
 
 body {
-  color: var(--white);
-  background: var(--bg-color);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	color: var(--white);
+	background: var(--bg-color);
+	font-family: Arial, Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+button {
+	margin: 0;
+	padding: 0;
+	border: none;
+	background: none;
+	font: inherit;
+	color: inherit;
+	cursor: pointer;
+	outline: none;
+}
+
+.horizontal-divider {
+	position: relative;
+	width: 100%;
+	height: 1px;
+	margin: 20px 0;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 5%;
+		right: 5%;
+		height: 100%;
+		background: linear-gradient(
+			to right,
+			transparent 0%,
+			#2a3439 20%,
+			#2a3439 50%,
+			#2a3439 90%,
+			transparent 100%
+		);
+	}
 }
 
 // @media (prefers-color-scheme: dark) {

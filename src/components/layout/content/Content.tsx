@@ -2,11 +2,13 @@ import type { PropsWithChildren } from 'react'
 
 import { Header } from './header/Header'
 
+import cls from './Content.module.scss'
+
 export function Content({ children }: PropsWithChildren<unknown>) {
 	return (
-		<div>
+		<div className={cls.content}>
 			<Header />
-			<section>{children}</section>
+			<section className={cls.section}>{children}</section>
 		</div>
 	)
 }

@@ -1,0 +1,29 @@
+.menuItem {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	&:hover .icon {
+		transition-duration: 300ms;
+		transition-property: color rotate;
+		transition-timing-function: ease-in-out;
+		color: var(--red);
+		rotate: -5deg;
+	}
+  span {
+    white-space: nowrap;
+  }
+}
+
+.icon {
+	min-width: 24px;
+}
+
+.last {
+	background-color: var(--border-color);
+	height: 2px;
+	margin-block: 1.25rem;
+	width: 100%;
+	display: block;
+}
