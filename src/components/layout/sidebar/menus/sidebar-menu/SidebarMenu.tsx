@@ -1,3 +1,6 @@
+import { usePathname } from 'next/navigation'
+import { match } from 'path-to-regexp'
+
 import type { ISidebarItem } from '../../sidebar.types'
 import { MenuItem } from '../menu-item/MenuItem'
 
@@ -8,6 +11,7 @@ interface Props {
 	menu: ISidebarItem[]
 }
 export function SidebarMenu({ menu, title }: Props) {
+	const pathname = usePathname()
 	return (
 		<nav className={cls.sidebarMenu}>
 			{title && <div className={cls.title}>{title}</div>}
@@ -16,6 +20,7 @@ export function SidebarMenu({ menu, title }: Props) {
 					<MenuItem
 						key={menuItem.link}
 						item={menuItem}
+						isActive={!!match(menuItem.link)(pathname)}
 					/>
 				))}
 			</ul>

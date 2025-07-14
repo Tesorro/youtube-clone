@@ -9,7 +9,7 @@ import { Sidebar } from './sidebar/Sidebar'
 import cls from './Layout.module.scss'
 
 export function Layout({ children }: PropsWithChildren<unknown>) {
-	const [isShowedSidebar, setIsShowedSidebar] = useState(false)
+	const [isShowedSidebar, setIsShowedSidebar] = useState(true)
 	return (
 		<main
 			className={cn(cls.layout, {

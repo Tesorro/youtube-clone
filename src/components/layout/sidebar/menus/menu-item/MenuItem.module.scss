@@ -11,13 +11,17 @@
 		color: var(--red);
 		rotate: -5deg;
 	}
-  span {
-    white-space: nowrap;
-  }
+	span {
+		white-space: nowrap;
+	}
 }
 
 .icon {
 	min-width: 24px;
+}
+
+.active {
+	color: var(--red);
 }
 
 .last {
