@@ -1,7 +1,7 @@
 import { Menu, SquarePlay } from 'lucide-react'
 import Link from 'next/link'
 
-import { PUBLIC_PAGE } from '@/config/public-page.config'
+import { PAGE } from '@/config/public-page.config'
 
 import cls from './SidebarHeader.module.scss'
 
@@ -12,7 +12,7 @@ export function SidebarHeader() {
 				<Menu />
 			</button>
 			<Link
-				href={PUBLIC_PAGE.HOME}
+				href={PAGE.HOME}
 				className={cls.logoWrapper}
 			>
 				<SquarePlay
