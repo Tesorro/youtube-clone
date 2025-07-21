@@ -1,0 +1,27 @@
+.skeleton {
+	background-color: var(--border-color);
+	border-radius: 0.5rem;
+	height: 8.5rem;
+	margin-bottom: 0.625rem;
+	animation: pulse 2s infinite;
+
+	@keyframes pulse {
+		0%,
+		100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.5;
+		}
+	}
+
+	&--circle {
+		border-radius: 50%;
+		width: 2.5rem;
+		aspect-ratio: 1;
+	}
+
+	&--text {
+		height: 1rem;
+	}
+}

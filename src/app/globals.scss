@@ -1,5 +1,5 @@
 :root {
-	--red: #ad2528;
+	--red: #ef4444;
 	--white: #ffffff;
 	--bg-color: #191b28;
 	--border-color: #2a3439;
@@ -8,19 +8,10 @@
 	--sidebar-width: 16rem;
 }
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --background: #0a0a0a;
-//     --foreground: #ededed;
-//   }
-// }
-
 html,
 body {
 	max-width: 100vw;
 	overflow-x: hidden;
-	// font-size: 1.125rem;
-	// line-height: 1.75rem;
 }
 
 body {
@@ -79,9 +70,3 @@ button {
 		);
 	}
 }
-
-// @media (prefers-color-scheme: dark) {
-//   html {
-//     color-scheme: dark;
-//   }
-// }

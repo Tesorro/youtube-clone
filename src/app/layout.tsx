@@ -5,12 +5,17 @@ import { Layout } from '@/components/layout/Layout'
 import { Content } from '@/components/layout/content/Content'
 import { Sidebar } from '@/components/layout/sidebar/Sidebar'
 
+import { Providers } from '@/providers/Providers'
+
 import './globals.scss'
 
 const Suse = SUSE({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-	title: 'Youtube Clone',
+	title: {
+		absolute: 'Youtube Clone',
+		template: `%s | Youtube Clone`
+	},
 	description: 'Created by Tesorro'
 }
 
@@ -22,7 +27,9 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={Suse.className}>
-				<Layout>{children}</Layout>
+				<Providers>
+					<Layout>{children}</Layout>
+				</Providers>
 			</body>
 		</html>
 	)

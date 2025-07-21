@@ -1,0 +1,10 @@
+.content {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2.5rem;
+}
+.videoItemsContainer {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 1rem;
+}

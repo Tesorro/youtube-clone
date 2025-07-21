@@ -1,3 +1,4 @@
+import type { IUser } from "./user.types";
 import type { IVideo } from "./video.types";
 
 export interface IChannel {
@@ -8,7 +9,7 @@ export interface IChannel {
   isVerified: boolean;
   avatarUrl: string;
   bannerUrl: string;
-  // user:
+  user: IUser;
   videos: IVideo[];
   subscribers: any[];
   createdAt: string;
