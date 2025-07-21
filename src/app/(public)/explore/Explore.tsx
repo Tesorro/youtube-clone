@@ -4,12 +4,9 @@ import { useQuery } from '@tanstack/react-query'
 import { Compass } from 'lucide-react'
 
 import { Heading } from '@/ui/heading/Heading'
-import { SkeletonLoader } from '@/ui/skeleton-loader/SkeletonLoader'
-import { VideoItem } from '@/ui/video-item/VideoItem'
+import { VideoGrid } from '@/ui/video-grid/VideoGrid'
 
 import { videoService } from '@/services/video.service'
-
-import cls from './Explore.module.scss'
 
 export function Explore() {
 	const { data, isLoading } = useQuery({
@@ -19,19 +16,10 @@ export function Explore() {
 	return (
 		<section>
 			<Heading Icon={Compass}>Explore</Heading>
-			<div className={cls.videoItemsContainer}>
-				{isLoading ? (
-					<SkeletonLoader count={6} />
-				) : (
-					data?.data.videos.length &&
-					data.data.videos.map(video => (
-						<VideoItem
-							key={video.id}
-							video={video}
-						/>
-					))
-				)}
-			</div>
+			<VideoGrid
+				videos={data?.data.videos}
+				isLoading={isLoading}
+			/>
 		</section>
 	)
 }

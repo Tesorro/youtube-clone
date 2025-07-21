@@ -1,3 +1,14 @@
 .header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	column-gap: 2rem;
 	padding: 1.2rem;
+	border-bottom: 1px solid var(--border-color);
+
+	&__icons {
+		display: flex;
+		align-items: center;
+		column-gap: 2rem;
+	}
 }

@@ -1,0 +1,8 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.7rem;
+  width: 100%;
+
+  // Адаптивные стили...
+}

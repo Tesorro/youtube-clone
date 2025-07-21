@@ -1,0 +1,19 @@
+.headerLinks {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	&__link {
+		opacity: 0.6;
+		transition-property: opacity;
+		transition-timing-function: ease-in-out;
+		transition-duration: 333ms;
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+	&__icon {
+		width: 20;
+		height: 20;
+	}
+}

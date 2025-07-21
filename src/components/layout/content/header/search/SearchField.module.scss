@@ -1,0 +1,14 @@
+.searchField {
+	width: 66%;
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		border: none;
+		padding-inline: 1rem;
+		padding-block: 0.5rem;
+		outline: 2px solid transparent;
+		outline-offset: 2px;
+		caret-color: var(--white);
+		color: var(--white);
+	}
+}

@@ -3,8 +3,6 @@ import type { CSSProperties } from 'react'
 
 import cls from './SkeletonLoader.module.scss'
 
-// Путь может отличаться в вашем проекте
-
 interface Props {
 	count?: number
 	style?: CSSProperties
