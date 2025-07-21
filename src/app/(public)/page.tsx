@@ -2,6 +2,7 @@ import { Flame } from 'lucide-react'
 import type { Metadata } from 'next'
 
 import { Heading } from '@/ui/heading/Heading'
+import { VideoGrid } from '@/ui/video-grid/VideoGrid'
 import { VideoItem } from '@/ui/video-item/VideoItem'
 
 import { Explore } from './explore/Explore'
@@ -35,16 +36,10 @@ export default async function Home() {
 			<section className={cls.content}>
 				<section>
 					<Heading Icon={Flame}>Trending</Heading>
-					<div className={cls.videoItemsContainer}>
-						{trendingVideos.length &&
-							trendingVideos.map(video => (
-								<VideoItem
-									key={video.id}
-									video={video}
-									Icon={Flame}
-								/>
-							))}
-					</div>
+					<VideoGrid
+						videos={trendingVideos}
+						Icon={Flame}
+					/>
 				</section>
 				<Explore />
 			</section>

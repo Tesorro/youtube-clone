@@ -68,9 +68,11 @@ export function VideoItem({ video, Icon }: Props) {
 					className={cls.videoItem__channelNameLink}
 				>
 					<span className={cls.videoItem__channelName}>{video.channel.user.name}</span>
-					<span className={cls.videoItem__verified}>
-						<Check className={cls.videoItem__check} />
-					</span>
+					{video.channel.isVerified && (
+						<span className={cls.videoItem__verified}>
+							<Check className={cls.videoItem__check} />
+						</span>
+					)}
 				</Link>
 			</div>
 		</div>
