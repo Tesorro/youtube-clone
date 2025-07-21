@@ -12,7 +12,7 @@ export function Layout({ children }: PropsWithChildren<unknown>) {
 	const [isShowedSidebar, setIsShowedSidebar] = useState(true)
 	return (
 		<main
-			className={cn(cls.layout, {
+			className={cn(cls.layout, cls.initialSidebar, {
 				[cls.showedSidebar]: isShowedSidebar,
 				[cls.hiddenSidebar]: !isShowedSidebar
 			})}

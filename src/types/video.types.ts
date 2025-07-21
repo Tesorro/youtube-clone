@@ -12,3 +12,11 @@ export interface IVideo {
   channel: IChannel
   createdAt: string
 }
+
+export interface IVideoApiResponse {
+  videos: IVideo[];
+  page: number;
+  limit: number;
+  totalCount: number;
+  totalPages: number;
+}
