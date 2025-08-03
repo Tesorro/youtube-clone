@@ -1,0 +1,44 @@
+.auth {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	width: 20%;
+	border: 1px solid var(--border-color);
+	border-radius: 0.5rem;
+	padding: 2rem;
+	.inner {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 1.5rem;
+		gap: 1rem;
+
+		.loginBtn,
+		.registerBtn {
+			color: var(--white);
+			border-bottom: 2px solid transparent;
+			padding-inline: 1rem;
+			padding-block: 0.5rem;
+		}
+
+		.active {
+			border-bottom: 2px solid var(--red);
+			color: var(--red);
+		}
+	}
+}
+
+.logoWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.25rem;
+	margin-bottom: 1rem;
+}
+.logo {
+	color: var(--red);
+}
