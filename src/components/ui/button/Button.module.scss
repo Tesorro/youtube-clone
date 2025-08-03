@@ -1,0 +1,27 @@
+.button {
+	padding-block: 0.5rem;
+	padding-inline: 1.5rem;
+	background-color: transparent;
+	border: 1px solid var(--red);
+  color: var(--white);
+  font-weight: 500;
+  border-radius: 0.25rem;
+  transition-property: background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 333ms;
+  
+  &:hover {
+    background-color: var(--red);
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    border-color: gray;
+    background-color: transparent;
+    
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

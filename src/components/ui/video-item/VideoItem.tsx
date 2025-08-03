@@ -1,3 +1,4 @@
+import * as m from 'framer-motion/m'
 import { Check, type LucideIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -18,7 +19,17 @@ interface Props {
 
 export function VideoItem({ video, Icon }: Props) {
 	return (
-		<div className={cls.videoItem}>
+		<m.div
+			className={cls.videoItem}
+			whileHover={{
+				scale: 1.03
+			}}
+			transition={{
+				type: 'spring',
+				stiffness: 500,
+				damping: 30
+			}}
+		>
 			<div className={cls.videoItem__preview}>
 				<Link
 					href={PAGE.VIDEO(video.slug)}
@@ -75,6 +86,6 @@ export function VideoItem({ video, Icon }: Props) {
 					)}
 				</Link>
 			</div>
-		</div>
+		</m.div>
 	)
 }

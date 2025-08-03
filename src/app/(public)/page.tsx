@@ -28,19 +28,21 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-	const { data } = await videoService.getTrendingVideos()
-
-	const trendingVideos = data.slice(0, 6)
+	const { data: trendingVideos } = await videoService.getTrendingVideos()
 	return (
 		<>
 			<section className={cls.content}>
-				<section>
-					<Heading Icon={Flame}>Trending</Heading>
-					<VideoGrid
-						videos={trendingVideos}
-						Icon={Flame}
-					/>
-				</section>
+				{Array.isArray(trendingVideos) && trendingVideos.length > 0 ? (
+					<section>
+						<Heading Icon={Flame}>Trending</Heading>
+						<VideoGrid
+							videos={trendingVideos}
+							Icon={Flame}
+						/>
+					</section>
+				) : (
+					<></>
+				)}
 				<Explore />
 			</section>
 		</>
