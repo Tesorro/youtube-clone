@@ -42,3 +42,14 @@
 .logo {
 	color: var(--red);
 }
+
+.recaptcha {
+	margin-bottom: 0.75rem;
+	filter: invert(1) grayscale(1);
+	transform: scale(1.1);
+
+	> div > div {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
